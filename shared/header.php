@@ -1,8 +1,3 @@
-<?php
-  include "../config/config.php";
-  $nav = "SELECT * FROM navegacion LIMIT 4";
-  $navres = mysqli_query($Cnn,$nav);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +12,14 @@
     <div class="wrapper">
         <h3 class="logo">MOB</h3>
         <nav>
-            <?php
-                while($row= mysqli_fetch_array($navres)){
-                    echo "<a href='#'>".$row['opcion']."</a>";        
-                }
-            ?>  
+        <?php
+            $JSON = file_get_contents('../shared/data.json');
+            $decode_json = json_decode($JSON, true);
+            $opciones = $decode_json['navegacion'];   
+            foreach($opciones as $country) {
+            echo "<a href='#'>".$country['opcion']."</a>";
+            }
+        ?>  
         </nav>
     </div>
      </header>

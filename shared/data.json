@@ -1,0 +1,16 @@
+{
+    "prendas": [
+        {"nombre":"Camisa M/L manga corta unicolor", "imagen":"../public/imgs/camisa unicolor.jpg","precio":24.000,"tipo":1},
+        {"nombre":"Camisa estampada manga corta","imagen":"../public/imgs/camisa estampada.jpg","precio":27.000,"tipo": 1},
+        {"nombre":"Camisa a rayas azul","imagen":"../public/imgs/camisa a rayas azul.jpg","precio":25.000,"tipo": 1},
+        {"nombre":"chaqueta efecto piel","imagen":"../public/imgs/chaqueta efecto piel.jpg","precio":45000,"tipo": 2},
+        {"nombre":"chaqueta jean","imagen":"../public/imgs/chaqueta jean.jpeg","precio": 39000,"tipo": 2},
+        {"nombre":"gorra estampada","imagen":"../public/imgs/gorra estampada.jpg","precio": 12000,"tipo": 3}
+    ],
+    "navegacion":[
+        {"opcion":"Pago"},
+        {"opcion":"Contacto"},
+        {"opcion":"Atención"},
+        {"opcion":"Nosotros"}
+    ]
+}

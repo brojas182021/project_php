@@ -1,26 +1,3 @@
-<?php
-  include "../config/config.php";
-
-  if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $GLOBALS['conexion'] = $Cnn;
-    $GLOBALS['opcion'] = $_POST['opcprenda'];
-  }
-
-function cards(){
-    $opcion = $GLOBALS['opcion'];
-    $conexion = $GLOBALS['conexion'];
-    $queryp = "SELECT * FROM prenda WHERE tipo = $opcion";
-    $prendas = mysqli_query($conexion,$queryp);
-    while($infoPrendas = mysqli_fetch_array($prendas)){
-        echo "<div class='card'>";
-        echo "  <img src='".$infoPrendas['imagen']."' alt=''>";
-        echo "  <p>".$infoPrendas['nombre']."</p>";
-        echo "  <a href='#'>$".$infoPrendas['precio']."</a>";
-        echo "</div>";
-      }
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,17 +11,34 @@ function cards(){
 
   
     <select class="field" name="opcprenda">
-        <option default></option>
+        <option default> ---</option>
         <option value="1"> Camisas</option>
-        <option value="2"> Pantalones</option>
-        <option value="3"> Chaquetas</option>
-        <option value="4"> Gorras</option>
+        <option value="2"> Chaquetas</option>
+        <option value="3"> Gorras</option>
     </select>
 		<input type="submit" value="Buscar">
 	</form>
 
   <div class="container">
     <?php
-    cards();
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+      $GLOBALS['opcion'] = $_POST['opcprenda'];
+      $GLOBALS['data'] = $dataJSON = file_get_contents('../shared/data.json');
+
+      function cards(){
+        $opcion = $GLOBALS['opcion'];
+        $data_json = $GLOBALS['data'];
+        $decode_json = json_decode($data_json,true);
+        $prendas = $decode_json['prendas'];
+        foreach($prendas as $prenda){
+          echo "<div class='card'>";
+            echo "  <img src='".$prenda['imagen']."' alt=''>";
+            echo "  <p>".$prenda['nombre']."</p>";
+            echo "  <a href='#'>$".$prenda['precio']."</a>";
+            echo "</div>";
+          }
+      }
+      cards();
+      }
     ?>
   </div>
