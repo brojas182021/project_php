@@ -50,6 +50,38 @@ header nav a:hover{
     color: rgb(163, 163, 163);
 }
 
+.slider{
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 999;
+}
+
+.slider img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.slider input[type = "radio"]{
+    position: relative;
+    z-index: 50;
+    margin: 10px;
+}
+
+.slider input[type = "radio"]:checked ~ img{
+    opacity: 1;
+}
 form{
 	color: #999;
 	font-size: 34px;
@@ -61,12 +93,12 @@ form{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-input, textarea{
+#submit_button, textarea{
     width: 80%;
     border: none;
     border-radius: 0 25px 25px 0;
     height: 30px;
-    font-size: 15px;
+    font-size: 14px;
     background-color: rgb(241, 134, 134);
     font-weight: bold;
 }

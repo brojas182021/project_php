@@ -1,16 +1,49 @@
 {
-    "prendas": [
-        {"nombre":"Camisa M/L manga corta unicolor", "imagen":"../public/imgs/camisa unicolor.jpg","precio":24.000,"tipo":1},
-        {"nombre":"Camisa estampada manga corta","imagen":"../public/imgs/camisa estampada.jpg","precio":27.000,"tipo": 1},
-        {"nombre":"Camisa a rayas azul","imagen":"../public/imgs/camisa a rayas azul.jpg","precio":25.000,"tipo": 1},
-        {"nombre":"chaqueta efecto piel","imagen":"../public/imgs/chaqueta efecto piel.jpg","precio":45000,"tipo": 2},
-        {"nombre":"chaqueta jean","imagen":"../public/imgs/chaqueta jean.jpeg","precio": 39000,"tipo": 2},
-        {"nombre":"gorra estampada","imagen":"../public/imgs/gorra estampada.jpg","precio": 12000,"tipo": 3}
-    ],
-    "navegacion":[
-        {"opcion":"Pago"},
-        {"opcion":"Contacto"},
-        {"opcion":"Atención"},
-        {"opcion":"Nosotros"}
-    ]
+   "camisas":[
+        {
+            "nombre":"Camisa a rayas azul",
+            "imagen":"../public/imgs/pospago/camisa a rayas azul.jpg",
+            "precio":25000
+        },
+        {
+            "nombre":"Camisa estampada manga corta",
+            "imagen":"../public/imgs/pospago/camisa estampada.jpg",
+            "precio":27000
+        },
+        {
+            "nombre":"Camisa M/L manga larga unicolor",
+            "imagen":"../public/imgs/pospago/camisa unicolor.jpg",
+            "precio":24000
+        }
+   ],
+   "chaquetas":[
+    {
+        "nombre":"chaqueta efecto piel",
+        "imagen":"../public/imgs/pospago/chaqueta efecto piel.jpg",
+        "precio":45000
+    },
+    {
+        "nombre":"chaqueta jean",
+        "imagen":"../public/imgs/pospago/chaqueta jean.jpeg",
+        "precio": 39000
+    }
+   ],
+   "gorras":[
+        {
+            "nombre":"gorra estampada",
+            "imagen":"../public/imgs/pospago/gorra estampada.jpg",
+            "precio":12000
+        }
+   ],
+   "imgback":[
+       {
+           "img":"../public/imgs/pospago/imgback1.jpg"
+       },
+       {
+           "img":"../public/imgs/pospago/imgback2.jpg"
+       },
+       {
+           "img":"../public/imgs/pospago/imgback3.jpg"
+       }
+   ]
 }

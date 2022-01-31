@@ -12,14 +12,10 @@
     <div class="wrapper">
         <h3 class="logo">MOB</h3>
         <nav>
-        <?php
-            $JSON = file_get_contents('../shared/data.json');
-            $decode_json = json_decode($JSON, true);
-            $opciones = $decode_json['navegacion'];   
-            foreach($opciones as $country) {
-            echo "<a href='#'>".$country['opcion']."</a>";
-            }
-        ?>  
+            <a href="#">Pago</a>
+            <a href="#">Atención</a>
+            <a href="#">Contacto</a>
+            <a href="#">Nosotros</a>
         </nav>
     </div>
      </header>
