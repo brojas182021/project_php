@@ -47,7 +47,12 @@ header nav a{
 }
 
 header nav a:hover{
+    border-bottom: 2px solid blue;
     color: rgb(163, 163, 163);
+}
+
+header nav a.active{
+    border-bottom: 2px solid blue;
 }
 
 .slider{
