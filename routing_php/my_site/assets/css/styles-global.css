@@ -1,0 +1,10 @@
+
+.main-menu ul li a:hover{
+    color: aqua;
+    border-bottom: 2px solid greenyellow;
+}
+
+.main-menu ul li a.active{
+    color: aqua;
+    border-bottom: 2px solid greenyellow;
+}
