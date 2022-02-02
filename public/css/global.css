@@ -1,10 +1,14 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 body{
-    background-color: #e2e5e4; 
+    background-color: #e2e5e4;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
 
 header{
@@ -43,7 +47,7 @@ header nav a{
     line-height: normal;
     font-size: 17px;
     font-weight: bold;
-    transition: 0.5s;
+    transition: 0.1s;
 }
 
 header nav a:hover{
@@ -55,38 +59,43 @@ header nav a.active{
     border-bottom: 2px solid blue;
 }
 
-.slider{
-    width: 100%;
-    height: 400px;
+.slider {
+    width: 1349px;
+    height: 520px;
     margin: auto;
     position: relative;
-    list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    z-index: 999;
 }
 
-.slider img{
+.slider img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
     opacity: 0;
     transition: all 0.7s;
 }
 
-.slider input[type = "radio"]{
+.slider input[type="radio"] {
+    position: relative;
+    z-index: 50;
+}
+
+.slider input[type="radio"]:checked ~ img {
+    opacity: 1;
+}
+
+.slider input[type="radio"] + label{
     position: relative;
     z-index: 50;
     margin: 10px;
+
 }
 
-.slider input[type = "radio"]:checked ~ img{
-    opacity: 1;
-}
 form{
 	color: #999;
 	font-size: 34px;
@@ -95,7 +104,6 @@ form{
 	width: 400px;
     display: grid;
     grid-template-columns: 1fr  1fr;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #submit_button, textarea{
@@ -146,7 +154,6 @@ text-align: center;
     margin: 20px;
     text-align: center;
     transition:  all 0.25s;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .container .card:hover{
@@ -168,4 +175,65 @@ text-align: center;
     font-weight: 500;
     text-decoration: none;
     color: black;
+}
+
+.footer-container{
+    max-width: 1170px;
+    margin:auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: rgb(255, 255, 255);;
+    padding: 50px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: rgb(119, 119, 119);;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(241, 134, 134);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li p{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(160, 157, 157);
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+}
+
+.footer-col ul li p:hover{
+    cursor: default;
 }
