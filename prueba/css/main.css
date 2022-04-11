@@ -386,8 +386,12 @@ body {
   .estrella_text {
     position: absolute;
     top: 25%;
-    left: 40.1%;
-    font-size: 1.3em;
+    left: 37%;
+    font-size: 1.8em;
+  }
+
+  .estrella img {
+    width: 60%;
   }
 }
 
@@ -398,8 +402,13 @@ body {
 
   .estrella_text {
     position: absolute;
+    top: 28%;
     left: 40%;
     font-size: 1.6em;
+  }
+
+  .estrella img {
+    width: 50%;
   }
 }
 
@@ -408,10 +417,19 @@ body {
     font-size: 10px;
   }
 
+  .estrella {
+    top:18%;
+    left: 63%;
+  }
+
   .estrella_text {
     position: absolute;
-    left: 40%;
-    font-size: 1.9em;
+    left: 43%;
+    font-size: 1.4em;
+  }
+
+  .estrella img {
+    width: 35%;
   }
 
   .plan_info {
@@ -466,8 +484,12 @@ body {
   .estrella_text {
     position: absolute;
     top: 30%;
-    left: 42%;
-    font-size: 1.5em;
+    left: 42.5%;
+    font-size: 1.05em;
+  }
+
+  .estrella img {
+    width: 35%;
   }
 
   .plan_info {
